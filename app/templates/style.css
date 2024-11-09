@@ -1,0 +1,119 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container for central alignment */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+header h1 {
+    color: #007acc;
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
+header .subtitle {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 1.5em;
+}
+
+nav a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Form Styling */
+main h2 {
+    color: #007acc;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.5em;
+}
+
+form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+form button {
+    padding: 10px;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #005fa3;
+}
+
+/* Result Display Styling */
+.result {
+    background-color: #e6f7ff;
+    border-left: 4px solid #007acc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.result h3 {
+    color: #007acc;
+    margin-bottom: 0.5em;
+}
+
+.result p {
+    color: #333;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 2em;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+footer p {
+    line-height: 1.5;
+}

@@ -1,0 +1,43 @@
+<!-- templates/dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ current_user.username }}!</h1>
+        <p>Here's a summary of your feedback submissions.</p>
+
+        <table class="feedback-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Feedback</th>
+                    <th>Category</th>
+                    <th>Sentiment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for feedback in feedback_list %}
+                <tr>
+                    <td>{{ feedback.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+                    <td>{{ feedback.feedback }}</td>
+                    <td>{{ feedback.category }}</td>
+                    <td>{{ feedback.sentiment }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="4">No feedback submitted yet.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('main.feedback') }}" class="btn">Submit New Feedback</a>
+    </div>
+</body>
+</html>
